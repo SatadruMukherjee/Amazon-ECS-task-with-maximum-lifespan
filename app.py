@@ -29,7 +29,7 @@ def main():
   data_to_ingest={"amount":{"S":data["data"]["amount"]},"base":{"S":data["data"]["base"]},"currency":{"S":data["data"]["currency"]},"timestamp":{"S":current_time},"uuid":{"S":str(uuid.uuid4())}}
   put_item_to_dynamodb(data_to_ingest)
   print(f'Item {data_to_ingest} added to DynamoDB table {table_name}.')
-  time.sleep(300)
+  time.sleep(600)
   print('Data transfer complete.')
 
 main()
